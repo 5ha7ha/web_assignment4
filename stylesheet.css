@@ -1,0 +1,133 @@
+:root {
+    --green: #0F6B5F;
+    --field-bg: #f8f9fa;
+    --checked: #0a9f8b;
+     --amber: #F2A93B;
+    --unvalid: #dc3545;
+}
+
+body { font-family: 'Montserrat', sans-serif; }
+
+.ticket-card {
+  border-radius: 1.5rem;
+}
+.ticket-header {
+  background: var(--green);
+  color: white;
+  font-weight: 700;
+  padding: 1.5rem 2rem;
+}
+
+.form-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+
+.form-control,
+.form-select {
+  background-color: var(--field-bg);
+  border: 1px solid var(--green);
+}
+
+.form-control:focus,
+.form-select:focus {
+  background-color: #fff;
+  border-color: var(--checked);
+}
+.input-group-text{
+    background-color: var(--green);
+    color: white;
+    border: 1px solid var(--green);
+}
+.form-check-input:checked {
+  background-color: var(--checked);
+  border-color: var(--checked);
+}
+
+.trip-toggle {
+  border: 1px solid var(--green);
+  border-radius: 999px;
+  overflow: hidden;
+  background: #fff;
+}
+.trip-toggle .btn {
+  border: 0;
+  border-radius: 0;
+  background: white;
+  color: var(--green);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.45rem 1.25rem;
+}
+
+.trip-toggle .btn-check:checked + .btn {
+  background: var(--checked);
+  color: #fff;
+}
+
+.btn-find,
+.btn-clear {
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0.65rem 1.75rem;
+}
+
+.btn-find {
+  background: var(--amber);
+  border: 1px solid var(--amber);
+  color: black;
+}
+.btn-find:hover,
+.btn-find:focus-visible {
+    background: #e29a2a;
+  border-color: #e29a2a;
+  color: black;
+}
+
+.btn-clear {
+  background: #fff;
+  border: 1px solid black;
+  color: black;
+}
+.btn-clear:hover,
+.btn-clear:focus-visible {
+  background: black;
+  color: #fff;
+}
+/* phone */
+@media (max-width: 575.98px) {
+  .ticket-header { padding: 1rem 1.25rem; font-size: 1rem; }
+  .ticket-body { padding: 1.5rem 1.25rem; }
+  .ticket-card { border-radius: 1.1rem; }
+   .trip-toggle { display: flex; width: 100%; }
+  .trip-toggle .btn { flex: 1; }  
+}
+
+/* task2 */
+
+.btn-primary {
+  background-color: var(--green);
+   border: 1px solid var(--green);
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0.65rem 1.75rem;
+  width: 100%;
+}
+
+.btn-primary:hover,
+.btn-primary:focus-visible,
+.btn .btn-primary:active {
+  background-color: var(--checked);
+  border-color: var(--checked);
+}
+
+.form-control:user-invalid,
+.form-select:user-invalid,
+.form-check-input:user-invalid {
+  border-color: var(--unvalid);
+}
+:user-invalid ~ .invalid-feedback { display: block; }
+fieldset:has(:user-invalid) .invalid-feedback { display: block; } /* radio group */
